@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return <Title  text= "123673"/>
+  }
+}
+
+const Title = (props) => <h1>Title: {props.text}</h1>
+
+Title.propTypes = {
+  text(props, propName, component) {
+    if(!(propName in props)) {
+      return new Error(`missing ${propName}`)
+    }
+    if(props[propName].length < 6) {
+      return new Error(`${propName} is too short!!`)
+    }
+    if(props[propName].length === 6) {
+      return new Error(`${propName} is okay!`)
+    }
+  }
 }
 
 export default App;
