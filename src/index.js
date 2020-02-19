@@ -17,7 +17,7 @@ function MyInfo() {
 
 ReactDOM.render(
     <MyInfo />,
-    document.getElementById("root");
+    document.getElementById("root")
 )
 
 
