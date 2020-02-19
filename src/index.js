@@ -1,19 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-function MyInfo() {
-    return (
-        <div>
-            <h1>Seven</h1>
-            <p>Blah blah blah blah blah blah....</p>
-            <ul>
-                <li>San Francisco CA</li>
-                <li>The Recurse Center NYC</li>
-                <li>Detroit IL</li>
-            </ul>
-        </div>
-    )
-}
+import MyInfo from './Components/MyInfo'
 
 ReactDOM.render(
     <MyInfo />,
