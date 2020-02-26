@@ -1,6 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+
+function Welcome(props) {
+    return (
+        <div>
+            <h1>Hello, {props.name}</h1>
+            <p>You live at {props.address}</p>
+        </div>
+    )
+}
+
+function App() {
+    return (
+        <div>
+            <Welcome name="Sara" address="4, Wall street" />
+            <Welcome name="Seven" address="Jojomu island" />
+            <Welcome name="Theo" address="parawiama island" />
+        </div>
+    )
+}
 
 ReactDOM.render(
     <App />,
