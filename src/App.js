@@ -1,7 +1,7 @@
 import React from 'react';
 
 
- class App extends React.Component {
+export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -25,27 +25,27 @@ import React from 'react';
     }
 }
 
-export default class App2 extends React.Component {
-    render() {
-        return(
-            <Title />
-        )
-    }
-}
+// export default class App2 extends React.Component {
+//     render() {
+//         return(
+//             <Title  text="The book shop"/>
+//         )
+//     }
+// }
 
-const Title = () => {
-    return(
-        <h1>Title: {props.text}</h1>
-    )
-}
+// const Title = () => {
+//     return(
+//         <h1>Title: {props.text}</h1>
+//     )
+// }
 
-Title.props = {
-    text(props, propName, component) {
-        if(!(propName in props)) {
-            return new Error(`${propName} is missing, where did you put eba!`)
-        }
-        if(props[propName].length < 6) {
-            return new Error(`${propName} is too short`)
-        }
-    }
-}
+// Title.props = {
+//     text(props, propName, component) {
+//         if(!(propName in props)) {
+//             return new Error(`${propName} is missing, where did you put eba!`)
+//         }
+//         if(props[propName].length < 6) {
+//             return new Error(`${propName} is too short`)
+//         }
+//     }
+// }
