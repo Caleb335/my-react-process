@@ -1,29 +1,64 @@
 import React from 'react';
 
-
 export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            greet: "Welcome to this state",
-            cat:  "How well do you know meerkats"
+            currentEvent: "----"
         }
+        this.update = this.update.bind(this)
     }
-    Update(e) {
+    update(e) {
         this.setState({
-            greet: e.target.value,
-            cat: e.target.value
+            currentEvent: e.type
         })
-    }
+    } 
+    
     render() {
         return(
             <div>
-                <input type="text" onChange={this.Update.bind(this)}/>
-                <h1>{this.state.greet} - {this.state.cat}</h1>
+                <textarea 
+                    cols="30"
+                    row="10"
+                    onKeyPress = {this.update}
+                    onMouseDown={this.update}
+                    onMouseOver={this.update}
+                    // onBeforeInput={this.update}
+                    onCopy={this.update}
+                    onCut={this.update}
+                    onPaste={this.update}
+                />
+                <h1>{this.state.currentEvent}</h1>
             </div>
         )
     }
 }
+
+
+// // state 
+// export default class App extends React.Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             greet: "Welcome to this state",
+//             cat:  "How well do you know meerkats"
+//         }
+//     }
+//     Update(e) {
+//         this.setState({
+//             greet: e.target.value,
+//             cat: e.target.value
+//         })
+//     }
+//     render() {
+//         return(
+//             <div>
+//                 <input type="text" onChange={this.Update.bind(this)}/>
+//                 <h1>{this.state.greet} - {this.state.cat}</h1>
+//             </div>
+//         )
+//     }
+// }
 
 // export default class App2 extends React.Component {
 //     render() {
