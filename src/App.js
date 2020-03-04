@@ -1,4 +1,6 @@
 import React from 'react';
+import LifeCycle from './Components/LifeCycle';
+import Well  from './Components/Well'
 
 // handling events with state
 export default class App extends React.Component {
@@ -30,45 +32,13 @@ export default class App extends React.Component {
                     onPaste={this.update}
                 />
                 <h1>{this.state.currentEvent}</h1>
+                <LifeCycle />
+                <Well />
             </div>
         )
     }
 }
 
-
-
-// // state 
-// export default class App extends React.Component {
-//     constructor() {
-//         super();
-//         this.state = {
-//             greet: "Welcome to this state",
-//             cat:  "How well do you know meerkats"
-//         }
-//     }
-//     Update(e) {
-//         this.setState({
-//             greet: e.target.value,
-//             cat: e.target.value
-//         })
-//     }
-//     render() {
-//         return(
-//             <div>
-//                 <input type="text" onChange={this.Update.bind(this)}/>
-//                 <h1>{this.state.greet} - {this.state.cat}</h1>
-//             </div>
-//         )
-//     }
-// }
-
-// export default class App2 extends React.Component {
-//     render() {
-//         return(
-//             <Title  text="The book shop"/>
-//         )
-//     }
-// }
 
 // const Title = () => {
 //     return(
