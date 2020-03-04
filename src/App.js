@@ -1,6 +1,7 @@
 import React from 'react';
 import LifeCycle from './Components/LifeCycle';
-import Well  from './Components/Well'
+import Well  from './Components/Well';
+import Timer from './Components/Timer'
 
 // handling events with state
 export default class App extends React.Component {
@@ -34,6 +35,7 @@ export default class App extends React.Component {
                 <h1>{this.state.currentEvent}</h1>
                 <LifeCycle />
                 <Well />
+                <Timer />
             </div>
         )
     }
