@@ -1,5 +1,6 @@
 import React from 'react';
 
+// handling events with state
 export default class App extends React.Component {
     constructor() {
         super();
@@ -33,6 +34,7 @@ export default class App extends React.Component {
         )
     }
 }
+
 
 
 // // state 
