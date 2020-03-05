@@ -1,7 +1,7 @@
 import React from 'react';
 import LifeCycle from './Components/LifeCycle';
 import Well  from './Components/Well';
-import Timer from './Components/Timer'
+import Refs from './Components/Refs';
 
 // handling events with state
 export default class App extends React.Component {
@@ -21,6 +21,8 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
+                <Refs />
+                <hr />
                 <textarea 
                     cols="30"
                     row="10"
@@ -33,9 +35,10 @@ export default class App extends React.Component {
                     onPaste={this.update}
                 />
                 <h1>{this.state.currentEvent}</h1>
+                <hr />
                 <LifeCycle />
+                <hr />
                 <Well />
-                <Timer />
             </div>
         )
     }
